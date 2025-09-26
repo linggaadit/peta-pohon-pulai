@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Persebaran Pohon Pulai</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uW/rW3o06Jc0z0q95l8C/k3f4Qd6lW3i0oA/Q6s/6d5u3B0/g7o8v242y6lA8w8d2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: sans-serif; 
+            background-color: #1a232f; /* Warna latar belakang gelap untuk body */
+            color: #ecf0f1; /* Warna teks default */
+        }
+        #map-container {
+            display: flex;
+            height: 100vh;
+        }
+        #map { flex-grow: 1; }
+        #info-panel {
+            width: 320px; /* Lebar sidebar yang lebih kecil */
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+            overflow-y: auto;
+            background-color: #2c3e50; /* Warna latar belakang gelap */
+            display: flex;
+            flex-direction: column;
+        }
+        #app-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #7f8c8d; /* Garis pemisah yang lebih terang */
+            margin-bottom: 20px;
+        }
+        #app-header h2 {
+            color: #f39c12; /* Warna judul yang kontras */
+            margin: 0;
+        }
+        .info-card {
+            background-color: #34495e; /* Warna kartu yang sedikit lebih terang */
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+        .info-card h3 {
+            margin-top: 0;
+            color: #ecf0f1;
+        }
+        p {
+            margin: 5px 0;
+        }
+        /* Mengubah warna link agar terlihat di latar belakang gelap */
+        a {
+            color: #3498db; 
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map-container">
+        <div id="map"></div>
+        <div id="info-panel">
+            <header id="app-header">
+                <h2>Pohon Pulai</h2>
+            </header>
+            <p style="text-align: center; color: #bdc3c7; font-size: 14px;">Klik ikon pohon di peta untuk melihat detail.</p>
+            <div id="details-content">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
