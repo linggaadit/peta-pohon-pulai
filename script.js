@@ -6,9 +6,10 @@ const apiKey = '1a610303c3b5897c08b780b0aeb7e46a';
 const map = L.map('map').setView([-7.3942, 112.7338], 15);
 const markerGroup = L.featureGroup().addTo(map);
 
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=3e5ccc7a-083b-4c21-a91b-9f4479cb29cc', {
-    maxZoom: 20,
-    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+// Tambahkan layer peta Stadia Maps Alidade Smooth Dark
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
 const detailsPanel = document.getElementById('details-content');
@@ -161,3 +162,4 @@ function displayDetails(data, apiData) {
     }
 
 }
+
