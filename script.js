@@ -163,17 +163,19 @@ function displayDetails(data, apiData) {
     const co2Card = document.createElement('div');
     co2Card.className = 'info-card';
     co2Card.innerHTML = `
-        <h3>Rata-rata Serapan CO2 Tiap Wilayah</h3>
+        <h3>Total serapan CO2eq (kg) tiap wilayah:</h3>
         <p style="font-size: 12px; color: #aaa; margin-top: -10px;">
-            <br>
-            <i>*Pengambilan sampel ini berada di 6 wilayah.</i>
         </p>
-        <p><b>SERUNI:</b> 6,92 kg</p>
-        <p><b>ALOHA:</b> 79.215 kg</p>
-        <p><b>PSJ:</b> 27.120,25 kg</p>
-        <p><b>A.YANI:</b> 3,76 kg</p>
-        <p><b>SAGED:</b> 354,23 kg</p>
-        <p><b>GEDANGAN:</b> 15.847.297,032 kg</p>
+        <p><b>PSJ:</b> 398,69 </p>
+        <p><b>SAGED:</b> 126,41 </p>
+        <p><b>SERUNI:</b> 71,76 </p>
+        <p><b>KETAJEN: </b> 1,61 </p>
+        <p><b>ALOHA:</b> 104,58 </p>
+        <p><b>A.YANI:</b> 22,57</p>
+        <p><b>JUANDA:</b> 19,83 </p>
+        <p><b>KRAGAN:</b> 4,02 </p>
+        <p><b>KEBOAN SIKEP:</b> 5,69 </p>
+        <p><b>GEDANGAN:</b> 755,16 </p>
     `;
     detailsPanel.appendChild(co2Card);
 
